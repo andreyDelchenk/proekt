@@ -128,3 +128,24 @@ body::before {
  
 background-image: radial-gradient(circle, #e0d6c2 3px, transparent 3px);
 background-size: 50px 50px; }
+BODY {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  font-family: Georgia;
+}
+H2 {
+  font-size: 50px;
+  font-weight: normal;
+  cursor: pointer;
+  text-shadow: 1px 1px white,
+               2px 2px #777;
+  color: #333;
+  transition: all 1s;
+  }
+  H2:hover {
+    text-shadow: 1px 1px white,
+                 2px 2px tomato;
+    color: crimson;
+    }
