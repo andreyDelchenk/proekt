@@ -149,3 +149,41 @@ H2 {
                  2px 2px tomato;
     color: crimson;
     }
+  @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        /* Анимация движения */
+        @keyframes slideIn {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        
+        /* Анимация при наведении */
+        .grow-on-hover {
+            transition: transform 0.3s ease;
+        }
+        
+        .grow-on-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Вращающаяся анимация */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .spinner {
+            animation: spin 2s linear infinite;
+            display: inline-block;
+        }
