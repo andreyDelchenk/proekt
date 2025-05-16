@@ -126,7 +126,7 @@ body::before {
   body {
   
  
-background-image: radial-gradient(circle, #e0d6c2 3px, transparent 3px);
+background-image: radial-gradient(circle, #e0d6c2 6px, transparent 6px);
 background-size: 50px 50px; }
 BODY {
   display: flex;
