@@ -77,16 +77,27 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
-canvas { 
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
+ .container {
+            display: flex;
+            gap: 20px; /* Расстояние между таблицей и текстом */
         }
-        .content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            padding: 20px;
+        
+        .table-container {
+            flex: 0 0 auto; /* Таблица не растягивается */
+            width: 300px; /* Фиксированная ширина таблицы */
+        }
+        
+        .text-container {
+            flex: 1; /* Текст занимает оставшееся пространство */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
         }
