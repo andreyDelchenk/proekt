@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-color: #fafafa;
+    color: #333;
+}
+
+#hero-section {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.center-text h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+    letter-spacing: 0.1rem;
+    animation-name: fadeInUp;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(.2,.8,.2,1);
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.animated-text::before, .animated-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+    transform: scaleX(-1);
+    pointer-events: none;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+}
+
+.animated-text::before {
+    transform: skewY(-10deg) translateZ(-1px);
+}
+
+.animated-text::after {
+    transform: skewY(10deg) translateZ(-1px);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.image-container img {
+    width: 30%;
+    height: auto;
+    filter: grayscale(10%); /* Эффект лёгкого черно-белого оттенка */
+    transition: filter 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    filter: grayscale(0%);
+    cursor: zoom-in;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
